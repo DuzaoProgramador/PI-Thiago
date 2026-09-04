@@ -1,16 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CadAluno } from './cad-aluno/cad-aluno';
 
 const routes: Routes = [
   {
     path: '',
-    component: CadAluno
+    redirectTo: 'lista-ex1',
+    pathMatch: 'full'
+  },
+  {
+    path: 'lista-ex1',
+    loadChildren: () =>
+      import('./lista-ex1/lista-ex1-module')
+        .then(m => m.ListaEx1Module)
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
-export class AlunoRoutingModule {}
+export class AppRoutingModule {}
