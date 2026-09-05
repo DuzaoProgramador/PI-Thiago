@@ -1,0 +1,23 @@
+h2 {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input {
+  display: block;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+button {
+  margin-right: 5px;
+  padding: 5px 12px;
+}
