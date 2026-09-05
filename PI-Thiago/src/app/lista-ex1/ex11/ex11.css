@@ -1,0 +1,35 @@
+h2 {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input {
+  display: block;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.quantidade {
+  margin-top: 8px;
+}
+
+.quantidade button {
+  margin-right: 8px;
+  padding: 5px 12px;
+}
+
+.quantidade span {
+  margin-right: 8px;
+}
+
+p {
+  margin: 8px 0;
+}
+
+button {
+  padding: 5px 12px;
+}

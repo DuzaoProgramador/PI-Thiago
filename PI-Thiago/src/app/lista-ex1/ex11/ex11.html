@@ -1,0 +1,45 @@
+<h2>Exercício 11 - Carrinho de compras</h2>
+
+<label for="produto">Produto:</label>
+<input
+  id="produto"
+  type="text"
+  [(ngModel)]="produto"
+>
+
+<label for="preco">Preço:</label>
+<input
+  id="preco"
+  type="number"
+  [(ngModel)]="preco"
+>
+
+<label>Quantidade:</label>
+
+<div class="quantidade">
+  <button
+    (click)="diminuir()"
+    [disabled]="quantidade === 1"
+  >
+    -
+  </button>
+
+  <span>{{ quantidade }}</span>
+
+  <button (click)="aumentar()">
+    +
+  </button>
+</div>
+
+<p>Produto: {{ produto }}</p>
+<p>Preço: {{ preco | currency:'BRL' }}</p>
+<p>Total: {{ preco * quantidade | currency:'BRL' }}</p>
+
+<button
+  (click)="adicionarCarrinho()"
+  [disabled]="produto === '' || preco <= 0"
+>
+  Adicionar ao carrinho
+</button>
+
+<p *ngIf="mensagem">{{ mensagem }}</p>
