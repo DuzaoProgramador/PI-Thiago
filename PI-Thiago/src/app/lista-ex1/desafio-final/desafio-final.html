@@ -1,0 +1,35 @@
+<h2>Desafio Final - Matrícula em Curso</h2>
+
+<label for="nome">Nome:</label>
+<input
+  id="nome"
+  type="text"
+  [(ngModel)]="nome"
+>
+
+<label for="curso">Curso:</label>
+<input
+  id="curso"
+  type="text"
+  [(ngModel)]="curso"
+>
+
+<label for="matricula">Matrícula:</label>
+<input
+  id="matricula"
+  type="text"
+  [(ngModel)]="matricula"
+>
+
+<p>Nome: {{ nome }}</p>
+<p>Curso: {{ curso }}</p>
+<p>Matrícula: {{ matricula }}</p>
+
+<button
+  (click)="matricular()"
+  [disabled]="nome === '' || curso === '' || matricula === ''"
+>
+  Matricular
+</button>
+
+<p *ngIf="mensagem">{{ mensagem }}</p>
