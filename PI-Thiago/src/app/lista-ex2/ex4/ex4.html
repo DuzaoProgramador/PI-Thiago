@@ -1,0 +1,25 @@
+<div class="exercicio">
+  <h2>Exercício 4 - Situação do estoque</h2>
+
+  <p>Produto: {{ nomeProduto }}</p>
+
+  <p>Quantidade em estoque: {{ quantidadeEstoque }}</p>
+
+  <p *ngIf="quantidadeEstoque > 0">
+    Produto disponível
+  </p>
+
+  <p *ngIf="quantidadeEstoque === 0">
+    Produto sem estoque
+  </p>
+
+  <button (click)="adicionarUnidade()">
+    Adicionar unidade
+  </button>
+
+  <button
+    (click)="removerUnidade()"
+    [disabled]="quantidadeEstoque === 0">
+    Remover unidade
+  </button>
+</div>
