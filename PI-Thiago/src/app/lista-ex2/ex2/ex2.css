@@ -1,0 +1,13 @@
+.exercicio {
+  padding: 20px;
+}
+
+button {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+p {
+  margin-top: 20px;
+  font-size: 18px;
+}
