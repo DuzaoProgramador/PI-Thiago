@@ -1,0 +1,47 @@
+<div class="exercicio">
+  <h2>Exercício 13 - Lista de tarefas</h2>
+
+  <div class="resumo">
+    <p>Total de tarefas: {{ tarefas.length }}</p>
+    <p>Tarefas concluídas: {{ quantidadeConcluidas() }}</p>
+    <p>Tarefas pendentes: {{ quantidadePendentes() }}</p>
+  </div>
+
+  <p *ngIf="tarefas.length === 0" class="vazia">
+    Não existem tarefas cadastradas.
+  </p>
+
+  <div
+    *ngFor="let tarefa of tarefas"
+    class="tarefa"
+    [ngClass]="{
+      'prioridade-baixa': tarefa.prioridade === 'baixa',
+      'prioridade-media': tarefa.prioridade === 'média',
+      'prioridade-alta': tarefa.prioridade === 'alta',
+      'concluida': tarefa.concluida
+    }">
+
+    <h3>{{ tarefa.titulo }}</h3>
+
+    <p>
+      Responsável: {{ tarefa.responsavel }}
+    </p>
+
+    <p>
+      Prioridade: {{ tarefa.prioridade }}
+    </p>
+
+    <p *ngIf="tarefa.concluida">
+      Concluída
+    </p>
+
+    <p *ngIf="!tarefa.concluida">
+      Pendente
+    </p>
+
+    <button (click)="alterarSituacao(tarefa)">
+      {{ tarefa.concluida ? 'Marcar como pendente' : 'Marcar como concluída' }}
+    </button>
+
+  </div>
+</div>
