@@ -1,0 +1,17 @@
+.exercicio {
+  padding: 20px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+span {
+  margin-left: 10px;
+  font-weight: bold;
+}
