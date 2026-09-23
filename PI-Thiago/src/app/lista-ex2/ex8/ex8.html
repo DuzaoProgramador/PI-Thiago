@@ -1,0 +1,24 @@
+<div class="exercicio">
+  <h2>Exercício 8 - Lista de produtos</h2>
+
+  <div
+    class="produto"
+    *ngFor="let produto of produtos; let i = index">
+
+    <h3>Produto {{ i + 1 }}</h3>
+
+    <p>ID: {{ produto.id }}</p>
+
+    <p>Nome: {{ produto.nome }}</p>
+
+    <p>Preço: {{ produto.preco | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}</p>
+
+    <p>Quantidade disponível: {{ produto.quantidade }}</p>
+
+    <p>
+      Valor total em estoque:
+      {{ produto.preco * produto.quantidade | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}
+    </p>
+
+  </div>
+</div>
