@@ -8,6 +8,7 @@ import { Ex3 } from './ex3/ex3';
 import { Ex4 } from './ex4/ex4';
 import { Ex5 } from './ex5/ex5';
 import { Ex6 } from './ex6/ex6';
+import { Ex7 } from './ex7/ex7';
 
 import { ListaEx2RoutingModule } from './lista-ex2-routing-module';
 
@@ -18,7 +19,8 @@ import { ListaEx2RoutingModule } from './lista-ex2-routing-module';
     Ex3,
     Ex4,
     Ex5,
-    Ex6
+    Ex6,
+    Ex7
   ],
   imports: [
     CommonModule,
