@@ -1,0 +1,36 @@
+<div class="exercicio">
+  <h2>Exercício 10 - Promoção e estilo dinâmico</h2>
+
+  <div
+    class="produto"
+    *ngFor="let produto of produtos"
+    [ngStyle]="{
+      'font-weight': produto.promocao ? 'bold' : 'normal'
+    }">
+
+    <h3>{{ produto.nome }}</h3>
+
+    <p>
+      Quantidade em estoque: {{ produto.quantidade }}
+    </p>
+
+    <p
+      [ngStyle]="{
+        'color': produto.promocao ? '#d32f2f' : '#333'
+      }">
+
+      Preço:
+      {{ produto.preco | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}
+
+    </p>
+
+    <p *ngIf="produto.promocao" class="promocao">
+      Produto em promoção
+    </p>
+
+    <button (click)="alternarPromocao(produto)">
+      {{ produto.promocao ? 'Desativar promoção' : 'Ativar promoção' }}
+    </button>
+
+  </div>
+</div>
