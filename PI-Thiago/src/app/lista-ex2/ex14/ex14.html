@@ -1,0 +1,86 @@
+<div class="exercicio">
+  <h2>Exercício 14 - Sintaxe moderna do Angular</h2>
+
+  <section class="bloco">
+    <h3>Conversão do Exercício 2</h3>
+
+    @if (usuarioLogado) {
+      <p class="sucesso">
+        Usuário autenticado
+      </p>
+    } @else {
+      <p class="erro">
+        Acesso não autorizado
+      </p>
+    }
+
+    <button (click)="alternarLogin()">
+      {{ usuarioLogado ? 'Sair' : 'Entrar' }}
+    </button>
+  </section>
+
+  <section class="bloco">
+    <h3>Conversão do Exercício 6</h3>
+
+    @for (produto of produtos; track produto.id) {
+      <div class="produto">
+        <strong>{{ produto.nome }}</strong>
+        <span>Quantidade: {{ produto.quantidade }}</span>
+      </div>
+    } @empty {
+      <p class="vazio">
+        Nenhum produto cadastrado.
+      </p>
+    }
+
+    <button
+      (click)="produtos = []"
+      [disabled]="produtos.length === 0">
+      Limpar lista
+    </button>
+  </section>
+
+  <section class="bloco">
+    <h3>Conversão do Exercício 12</h3>
+
+    <p>
+      Total de produtos: {{ produtos.length }}
+    </p>
+
+    @for (produto of produtos; track produto.id) {
+      <div class="produto">
+        <div>
+          <strong>{{ produto.nome }}</strong>
+          <span>Quantidade: {{ produto.quantidade }}</span>
+        </div>
+
+        <button (click)="excluirProduto(produto.id)">
+          Excluir
+        </button>
+      </div>
+    } @empty {
+      <p class="vazio">
+        Nenhum produto cadastrado.
+      </p>
+    }
+  </section>
+
+  <section class="bloco">
+    <h3>Diferenças percebidas</h3>
+
+    <p>
+      1. A sintaxe moderna usa blocos como
+      <strong>&#64;if</strong>, <strong>&#64;else</strong> e
+      <strong>&#64;for</strong>, deixando o controle de fluxo mais direto
+      dentro do HTML.
+    </p>
+
+    <p>
+      2. O <strong>&#64;for</strong> permite utilizar
+      <strong>track</strong> para identificar cada item da lista,
+      enquanto o <strong>&#64;empty</strong> permite tratar diretamente
+      uma lista vazia sem precisar criar outro bloco com
+      <strong>*ngIf</strong>.
+    </p>
+  </section>
+</div>

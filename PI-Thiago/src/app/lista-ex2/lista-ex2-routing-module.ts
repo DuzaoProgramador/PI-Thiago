@@ -14,60 +14,23 @@ import { Ex10 } from './ex10/ex10';
 import { Ex11 } from './ex11/ex11';
 import { Ex12 } from './ex12/ex12';
 import { Ex13 } from './ex13/ex13';
+import { Ex14 } from './ex14/ex14';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: Ex1
-  },
-  {
-    path: 'ex2',
-    component: Ex2
-  },
-  {
-    path: 'ex3',
-    component: Ex3
-  },
-  {
-    path: 'ex4',
-    component: Ex4
-  },
-  {
-    path: 'ex5',
-    component: Ex5
-  },
-  {
-    path: 'ex6',
-    component: Ex6
-  },
-  {
-    path: 'ex7',
-    component: Ex7
-  },
-  {
-    path: 'ex8',
-    component: Ex8
-  },
-  {
-    path: 'ex9',
-    component: Ex9
-  },
-  {
-    path: 'ex10',
-    component: Ex10
-  },
-  {
-    path: 'ex11',
-    component: Ex11
-  },
-  {
-    path: 'ex12',
-    component: Ex12
-  },
-  {
-    path: 'ex13',
-    component: Ex13
-  }
+  { path: '', component: Ex1 },
+  { path: 'ex2', component: Ex2 },
+  { path: 'ex3', component: Ex3 },
+  { path: 'ex4', component: Ex4 },
+  { path: 'ex5', component: Ex5 },
+  { path: 'ex6', component: Ex6 },
+  { path: 'ex7', component: Ex7 },
+  { path: 'ex8', component: Ex8 },
+  { path: 'ex9', component: Ex9 },
+  { path: 'ex10', component: Ex10 },
+  { path: 'ex11', component: Ex11 },
+  { path: 'ex12', component: Ex12 },
+  { path: 'ex13', component: Ex13 },
+  { path: 'ex14', component: Ex14 }
 ];
 
 @NgModule({
