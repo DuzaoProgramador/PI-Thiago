@@ -13,6 +13,7 @@ import { Ex8 } from './ex8/ex8';
 import { Ex9 } from './ex9/ex9';
 import { Ex10 } from './ex10/ex10';
 import { Ex11 } from './ex11/ex11';
+import { Ex12 } from './ex12/ex12';
 
 import { ListaEx2RoutingModule } from './lista-ex2-routing-module';
 
@@ -28,7 +29,8 @@ import { ListaEx2RoutingModule } from './lista-ex2-routing-module';
     Ex8,
     Ex9,
     Ex10,
-    Ex11
+    Ex11,
+    Ex12
   ],
   imports: [
     CommonModule,

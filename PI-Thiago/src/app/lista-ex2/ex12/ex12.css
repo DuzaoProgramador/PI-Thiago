@@ -1,0 +1,58 @@
+.exercicio {
+  padding: 20px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 15px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.erro {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+.lista {
+  max-width: 600px;
+}
+
+.produto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.produto div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.botao-excluir {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+}
